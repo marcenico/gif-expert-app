@@ -1,0 +1,71 @@
+$shadow-value: 1px 1px 3px 1px var(--shadow-color);
+
+.c-button {
+  cursor: pointer;
+  display: inline-block;
+  background-color: var(--first-color);
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 2rem;
+  font-weight: var(--font-medium);
+  @include box-shadow($shadow-value);
+  transition: 450ms ease-in-out;
+
+  &:hover {
+    background-color: var(--first-color-alt);
+  }
+
+  &__link {
+    background-color: transparent;
+    box-shadow: unset;
+    color: var(--text-color);
+    -webkit-animation: fade-move-down 1.5s ease-in-out infinite;
+    -moz-animation: fade-move-down 1.5s ease-in-out infinite;
+    animation: fade-move-down 1.5s ease-in-out infinite;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  &__icon {
+    font-size: 1.5rem;
+  }
+
+  &__scroll-to-top {
+    position: fixed;
+    bottom: calc(var(--header-height) + 1rem);
+    right: 1rem;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    transition: all 450ms ease-in-out;
+
+    @include md {
+      bottom: 1rem;
+      right: 1rem;
+    }
+
+    &.is-active {
+      opacity: 1;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+
+  &--inline-flex {
+    display: inline-flex;
+  }
+
+  &--ai-center {
+    align-items: center;
+  }
+
+  &--rounded {
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    border-radius: 50%;
+    padding: 0;
+    width: 3rem;
+    height: 3rem;
+  }
+}

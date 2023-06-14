@@ -1,0 +1,45 @@
+$font-sizes: (
+  h1: var(--h1-font-size),
+  h2: var(--h2-font-size),
+  h3: var(--h3-font-size),
+  h4: var(--h4-font-size),
+  md: var(--normal-font-size),
+  sm: var(--small-font-size),
+  xs: var(--smaller-font-size)
+);
+
+.o-text {
+  @each $size, $value in $font-sizes {
+    &--#{$size} {
+      font-size: $value;
+    }
+  }
+
+  @each $alignment in center, left, right {
+    &--#{$alignment} {
+      text-align: #{$alignment};
+
+      @include md {
+        &\@md {
+          text-align: #{$alignment};
+        }
+      }
+    }
+  }
+
+  &--semi-bold {
+    font-weight: var(--font-semi-bold);
+  }
+
+  &--first-color {
+    color: var(--first-color);
+  }
+
+  &--white {
+    color: var(--text-color-white);
+  }
+
+  &--shadow {
+    text-shadow: 1px 2px 2px var(--shadow-color);
+  }
+}

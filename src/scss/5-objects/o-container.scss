@@ -1,0 +1,13 @@
+.o-container {
+  max-width: 400px;
+  padding: 1rem;
+  margin: auto;
+
+  @include sm {
+    max-width: 500px;
+  }
+
+  @include md {
+    max-width: 1000px;
+  }
+}

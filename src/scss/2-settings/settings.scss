@@ -1,0 +1,113 @@
+:root {
+  --header-height: 3.5rem;
+
+  @include md {
+    --header-height: 4rem;
+  }
+
+  /* Colors */
+  /*#region Change favorite color */
+  --hue: 100;
+  --saturation: 70%;
+  --lightness: 45%;
+
+  /* HSL color mode */
+  --first-color: hsl(var(--hue), var(--saturation), var(--lightness));
+  --second-color: hsl(calc(var(--hue) - 250), var(--saturation), var(--lightness));
+  --first-color-alt: hsl(var(--hue), 57%, 53%);
+  --first-color-light: hsl(var(--hue), var(--saturation), calc(var(--lightness) + 40%));
+  --title-color: hsl(var(--hue), 8%, 35%);
+  --text-color: hsl(var(--hue), 8%, 35%);
+  --text-color-white: hsl(var(--hue), calc(var(--saturation) * 0), calc(var(--lightness) + 45%));
+  --text-color-light: hsl(var(--hue), calc(var(--saturation) * 0), calc(var(--lightness) + 10%));
+  --input-color: hsl(var(--hue), 70%, 96%);
+  --body-color: hsl(var(--hue), var(--saturation), 100%);
+  --container-color: #fff;
+  --shadow-color: hsl(0, 0%, 65%);
+  --footer-color: hsl(var(--hue), 70%, 95%);
+  /*#endregion Change favorite color */
+
+  /*#region Font and typography */
+  --body-font: 'Roboto', monospace, serif;
+
+  /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+  --h1-font-size: 2.5rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.25rem;
+  --h4-font-size: 1.125rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+
+  @include md {
+    --h1-font-size: 4.25rem;
+    --h2-font-size: 2.5rem;
+    --h3-font-size: 1.45rem;
+    --h4-font-size: 1.5rem;
+    --normal-font-size: 1.25rem;
+    --small-font-size: 0.9rem;
+    --smaller-font-size: 0.825rem;
+  }
+
+  /* Font weight */
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  /*#endregion Font and typography */
+
+  /*#region Margins bottom */
+  /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+
+  /*#endregion Margins bottom */
+
+  /*#region Z Index */
+  /*==========  ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+  /*#endregion Z Index */
+
+  /*#region Others */
+  /*==========  ==========*/
+  --swiper-navigation-size: 1.5rem;
+  --swiper-navigation-top-offset: 28%;
+  --swiper-pagination-bottom: 0;
+  --swiper-theme-color: var(--first-color);
+  --swiper-navigation-sides-offset: 0;
+  @include md {
+    --swiper-navigation-top-offset: 45%;
+  }
+  /*#endregion Others */
+}
+
+[data-theme='dark'] {
+  --saturation: 70%;
+  --lightness: 45%;
+
+  /* HSL color mode */
+  --first-color: hsl(var(--hue), var(--saturation), var(--lightness));
+  --second-color: hsl(calc(var(--hue) - 250), var(--saturation), var(--lightness));
+  --first-color-alt: hsl(var(--hue), 57%, 53%);
+  --first-color-light: hsl(var(--hue), var(--saturation), calc(var(--lightness) + 40%));
+  --title-color: hsl(var(--hue), calc(var(--saturation) * 0), calc(var(--lightness) + 45%));
+  --text-color: hsl(var(--hue), calc(var(--saturation) * 0), calc(var(--lightness) + 45%));
+  --text-color-light: hsl(var(--hue), calc(var(--saturation) * 0), calc(var(--lightness) + 20%));
+  --text-color-white: hsl(var(--hue), calc(var(--saturation) * 0), calc(var(--lightness) + 45%));
+  --input-color: hsl(var(--hue), 70%, 96%);
+  --body-color: hsl(var(--hue), calc(var(--saturation) * 0.5), calc(var(--lightness) * 0.25));
+  --container-color: #fff;
+  --shadow-color: hsl(0, 0%, 20%);
+  --footer-color: hsl(var(--hue), calc(var(--saturation) * 0.5), calc(var(--lightness) * 0.35));
+
+  /*#region Others */
+  /*==========  ==========*/
+  --swiper-theme-color: var(--first-color);
+  /*#endregion Others */
+}

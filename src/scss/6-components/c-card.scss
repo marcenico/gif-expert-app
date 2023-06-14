@@ -1,0 +1,19 @@
+.c-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 320px;
+
+  @include box-shadow($shadow-value);
+
+  @include md {
+    max-width: auto;
+  }
+
+  &__img {
+    @include box-shadow($shadow-value);
+    border-radius: 8px;
+  }
+}

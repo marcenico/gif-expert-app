@@ -1,0 +1,72 @@
+// Media Query Mixins
+@mixin sm {
+  @media (min-width: 501px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: 1101px) {
+    @content;
+  }
+}
+
+// Range Mixins
+@mixin only-xs {
+  @media (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin only-sm {
+  @media (min-width: 501px) and (max-width: 1100px) {
+    @content;
+  }
+}
+
+@mixin only-md {
+  @media (min-width: 1101px) {
+    @content;
+  }
+}
+
+// Element Hover Mixin
+@mixin elem-hover {
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  &:hover {
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+}
+
+// User Select None Mixin
+@mixin user-select-none {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin box-shadow($shadow) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+@mixin section-page {
+  opacity: 0;
+  transition: opacity 1000ms ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-block: 5rem;
+}

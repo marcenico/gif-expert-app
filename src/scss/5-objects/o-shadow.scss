@@ -1,0 +1,13 @@
+$shadow-value: 0px 3px 6px -6px var(--shadow-color);
+
+.o-shadow {
+  &-bottom {
+    @include box-shadow($shadow-value);
+
+    @include md {
+      &\@md {
+        @include box-shadow($shadow-value);
+      }
+    }
+  }
+}
