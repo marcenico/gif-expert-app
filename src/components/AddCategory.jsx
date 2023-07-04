@@ -18,6 +18,10 @@ export const AddCategory = ({ onNewCategory }) => {
   return (
     <form onSubmit={onSubmit} aria-label="form">
       <input type="text" placeholder="Buscar gifs" value={inputValue} onChange={onInputChange} />
+
+      <button className="c-button" onClick={onSubmit}>
+        Agregar
+      </button>
     </form>
   );
 };
