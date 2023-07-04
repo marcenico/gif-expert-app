@@ -1,6 +1,5 @@
-import { fireEvent, render, renderHook, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import { GifExpertApp } from '../src/GifExpertApp';
-import { GifGrid } from '../src/components';
 
 describe('Pruebas en GifExpertApp', () => {
   test('Debe renderizar correctamente el componente', () => {
